@@ -28,11 +28,11 @@ const discountSenior = ticketPrice * 0.4;
 if (userAge < 18){
     //console.log(userAge, "You are a Minor");
     console.log(ticketPrice, "€ Initial Price");
-    console.log(ticketPrice - discountMinor, "€ Final Price with 20% of Discount.");
+    console.log(Math.round(ticketPrice - discountMinor), "€ Final Price with 20% of Discount.");
 } else if(userAge >= 65){
     //console.log(userAge,"You are a Senior Citizen.");
     console.log(ticketPrice, "€ Initial Price");
-    console.log(ticketPrice - discountSenior, "€ Final Price with 40% of Discount.");
+    console.log(Math.round(ticketPrice - discountSenior), "€ Final Price with 40% of Discount.");
 }
 else{
     console.log(ticketPrice, "€");
