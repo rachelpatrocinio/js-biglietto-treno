@@ -11,16 +11,16 @@ const km = parseInt(prompt("Quanti km farai?")); //num
 
 // calcolare il prezzo totale del viaggio, secondo queste regole:
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-const ticketPrice = Math.round(km * 0.21); //num
-//console.log(ticketPrice, "€");
+const ticketPrice = km * 0.21; //num
+//console.log(ticketPrice.toFixed(2), "€ Full Price");
 
 // va applicato uno sconto del 20% per i minorenni
 const discountMinor = ticketPrice * 0.2;
-//console.log(discountMinor);
+//console.log(discountMinor.toFixed(2), "€ Discounted amount for Minors");
 
 // oppure applicato uno sconto del 40% per gli over 65.
 const discountSenior = ticketPrice * 0.4; 
-//console.log(discountSenior);
+//console.log(discountSenior.toFixed(2), "€ Discounted amount for Seniors");
 
 //L’output del prezzo finale va stampato in console in forma “umana” cioè con al massimo due decimali, per indicare centesimi sul prezzo.
 
@@ -29,15 +29,15 @@ const discountSenior = ticketPrice * 0.4;
 // ELSE prezzo normale
 if (userAge < 18){
     //console.log(userAge, "You are a Minor");
-    console.log(ticketPrice, "€ Initial Price");
-    console.log(Math.round(ticketPrice - discountMinor), "€ Final Price with 20% of Discount.");
+    console.log(ticketPrice, "€ Original Price");
+    console.log((ticketPrice - discountMinor).toFixed(2), "€ Final Price with 20% of Discount.");
 } else if(userAge >= 65){
     //console.log(userAge,"You are a Senior Citizen.");
-    console.log(ticketPrice, "€ Initial Price");
-    console.log(Math.round(ticketPrice - discountSenior), "€ Final Price with 40% of Discount.");
+    console.log(ticketPrice, "€ Original Price");
+    console.log((ticketPrice - discountSenior).toFixed(2), "€ Final Price with 40% of Discount.");
 }
 else{
-    console.log(ticketPrice, "€");
+    console.log(ticketPrice.toFixed(2), "€ Final Price");
 }
 
 
