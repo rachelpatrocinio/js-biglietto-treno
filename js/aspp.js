@@ -25,6 +25,8 @@ const discountSenior = ticketPrice * 0.4;
 //L’output del prezzo finale va stampato in console in forma “umana” cioè con al massimo due decimali, per indicare centesimi sul prezzo.
 
 // IF utente è minorenne, il prezzo sarà scontato del 20%
+// IF utente è over 65, il prezzo sarà scontato del 40%
+// ELSE prezzo normale
 if (userAge < 18){
     //console.log(userAge, "You are a Minor");
     console.log(ticketPrice, "€ Initial Price");
